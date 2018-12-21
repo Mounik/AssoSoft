@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 20 déc. 2018 à 14:09
+-- Généré le :  ven. 21 déc. 2018 à 09:49
 -- Version du serveur :  10.1.37-MariaDB
 -- Version de PHP :  7.2.12
 
@@ -43,11 +43,11 @@ CREATE TABLE `activite` (
 --
 
 CREATE TABLE `association` (
-  `IDAssosciation` varchar(255) NOT NULL,
+  `IDAssosciation` int(11) NOT NULL,
   `TEL` varchar(255) NOT NULL,
   `Adresse` varchar(255) NOT NULL,
   `Nom` varchar(255) NOT NULL,
-  `TotalDon` int(11) NOT NULL,
+  `TotalDon` int(11) DEFAULT NULL,
   `Mail` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -143,6 +143,12 @@ ALTER TABLE `planning`
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `association`
+--
+ALTER TABLE `association`
+  MODIFY `IDAssosciation` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `dons`
